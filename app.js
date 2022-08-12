@@ -16,5 +16,16 @@ async function selectMediaStrem() {
   }
 }
 
+button.addEventListener('click', async () => {
+  //disable buttons when
+  button.disable = true;
+
+  //start picture in picture window
+  await videoElement.requestPictureInPicture();
+
+  //reset button
+  button.disabled = false;
+});
+
 // on load
 selectMediaStrem();
